@@ -10,6 +10,8 @@ import wishlist.Wishes.Wish;
 import wishlist.Wishes.WishManager;
 
 import javax.security.auth.login.LoginException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.sql.SQLException;
 
 @Controller
@@ -51,7 +53,8 @@ public class WishController {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
-        userManager.login(username,password);
+       User user = userManager.login(username,password);
+        setSessionInfo(request, user);
 
         return "wishsite";
 
@@ -69,11 +72,15 @@ public class WishController {
         String price = request.getParameter("wishprice");
         String url = request.getParameter("wishlink");
 
+
         Wish wish = new Wish(name, price, url);
-        wishManager.createWish(wish);
+        User user = (User) request.getAttribute("user",WebRequest.SCOPE_SESSION);
+        wishManager.createWish(wish, user);
 
         return "wishsite";
     }
 
-
+    private void setSessionInfo(WebRequest request, User user) {
+        request.setAttribute("user", user, WebRequest.SCOPE_SESSION);
+    }
 }

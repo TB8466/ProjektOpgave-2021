@@ -3,10 +3,7 @@ package wishlist.Users;
 import wishlist.Database.DBManager;
 
 import javax.security.auth.login.LoginException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class UserManager {
 
@@ -15,7 +12,7 @@ public class UserManager {
         Connection con = DBManager.getConnection();
         String query = "INSERT INTO Users (username, password) VALUES (?, ?)";
         PreparedStatement ps = con.prepareStatement(query);
-
+        //Preparestatements and insert into SQL
         ps.setString(1,user.getUsername());
         ps.setString(2,user.getPassword());
         ps.executeUpdate();
