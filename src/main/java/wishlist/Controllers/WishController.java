@@ -1,0 +1,79 @@
+package wishlist.Controllers;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.context.request.WebRequest;
+import wishlist.Users.User;
+import wishlist.Users.UserManager;
+import wishlist.Wishes.Wish;
+import wishlist.Wishes.WishManager;
+
+import javax.security.auth.login.LoginException;
+import java.sql.SQLException;
+
+@Controller
+public class WishController {
+
+    private UserManager userManager = new UserManager();
+    private WishManager wishManager = new WishManager();
+
+    @GetMapping("/")
+    public String renderHome(){
+        return "home";
+    }
+
+    @PostMapping("/login")
+    public String renderLogin(){ return "login"; }
+
+    @PostMapping("/newUser")
+    public String renderUserCreation(){ return "newUser"; }
+
+    @PostMapping("/register")
+    public String createUser(WebRequest request) throws SQLException {
+        //Retrieve data from HTML form
+        String username = request.getParameter("username");
+        String password1 = request.getParameter("password1");
+        String password2 = request.getParameter("password2");
+
+        if(password1.equals(password2)){
+            User user = new User(username,password1);
+            userManager.createUser(user);
+            return "home";
+        } else{
+            return "ERROR";
+        }
+    }
+
+    @PostMapping("/userHome")
+    public String renderUserHome(WebRequest request) throws LoginException, SQLException {
+        //Retrieve data from HTML form
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+
+        userManager.login(username,password);
+
+        return "wishsite";
+
+    }
+
+    @PostMapping("/wishCreator")
+    public String renderWishCreator(){
+        return "wishCreator";
+    }
+
+    @PostMapping("/createWish")
+    public String createWish(WebRequest request) throws SQLException {
+        //Retrieve data from HTML form
+        String name = request.getParameter("wishname");
+        String price = request.getParameter("wishprice");
+        String url = request.getParameter("wishlink");
+
+        Wish wish = new Wish(name, price, url);
+        wishManager.createWish(wish);
+
+        return "wishsite";
+    }
+
+
+}
