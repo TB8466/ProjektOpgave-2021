@@ -44,4 +44,9 @@ public class Wish {
     public void setUrl(String url) {
         this.url = url;
     }
+
+    @Override
+    public String toString() {
+        return "Name: "+name + "\nPrice: " + price + "\nURL: "+url+"\n\n";
+    }
 }

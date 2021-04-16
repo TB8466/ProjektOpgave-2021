@@ -1,17 +1,16 @@
 package wishlist.Controllers;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.context.request.WebRequest;
 import wishlist.Users.User;
 import wishlist.Users.UserManager;
 import wishlist.Wishes.Wish;
 import wishlist.Wishes.WishManager;
-
 import javax.security.auth.login.LoginException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import java.sql.SQLException;
 
 @Controller
@@ -78,6 +77,16 @@ public class WishController {
         wishManager.createWish(wish, user);
 
         return "wishsite";
+    }
+
+    @PostMapping("/renderWishlist")
+    public String renderWishlist(WebRequest request, Model model) throws SQLException {
+
+        User user = (User) request.getAttribute("user",WebRequest.SCOPE_SESSION);
+
+        model.addAttribute("wishlist",wishManager.viewWishlist(user));
+
+        return "wishlist";
     }
 
     private void setSessionInfo(WebRequest request, User user) {
