@@ -2,19 +2,38 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Welcome to /home</title>
+    <title>Velkommen til Lampeånden</title>
     <link rel="stylesheet" type="text/css" href="../static/css/home.css" th:href="@{/css/home.css}">
 </head>
-<body>
-<h1>Lampeånden</h1>
-<div class="flex-item"></div>
-<form name="login" action="/login"  method="post">
-   <input type="submit"  value="LOGIN">
-</form>
 
-<form name="createuser" action="/newUser"  method="post">
-    <input type="submit" value="CREATE NEW USER">
+<body>
+<header>
+<nav class="topnav">
+
+<form name="login" action="/login"  method="post">
+        <input type="submit" value="LOGIN">
 </form>
+    <form name="createuser" action="/newUser"  method="post">
+        <input type="submit"  value="CREATE NEW USER">
+    </form>
+    <div class="header1">
+        <img src="/images/spirit.jpg">
+        <p>LAMPEÅNDEN</p>
+    </div>
+</nav>
+</header>
+<div class="intro">
+<h2 class>Velkommen til lampeånden</h2>
+    <br>
+    <br>
+<p>Stryg let over den og måske er du heldig
+at kunne få dine ønske opfyldt</p>
+</div>
 
 </body>
+<footer class="main-footer">
+    <p>E-mail Lampeånden@mail.dk</p>
+    <p>tlf: +45 88 88 88 88</p>
+    <p>adresse: Madeupstreet 45</p>
+</footer>
 <html/>

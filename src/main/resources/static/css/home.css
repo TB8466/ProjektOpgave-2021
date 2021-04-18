@@ -1,3 +1,90 @@
-h1{
-    color: darkgoldenrod;
+html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+/* Nav Bar */
+input[type=submit]{
+    color: white;
+    background-color: gray;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+
+
+
+
+}
+/* Nav Bar */
+input[value="LOGIN"] {
+    background-color: dodgerblue;
+    font-size: 16px;
+    float: right;
+    cursor: pointer;
+    
+}
+/* Nav Bar */
+.topnav{
+    background-color: white;
+    width: 100%;
+    overflow: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+
+}
+ .header1{
+    flex-direction: row;
+     display: flex;
+     justify-content: space-between;
+
+}
+ img{
+     height: 100px;
+     width: 100px;
+     flex-direction: row;
+     display: flex;
+
+ }
+
+ /*Uden omkring body */
+
+body {
+    background-color: dodgerblue;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.intro{
+    text-align: center;
+    color: white;
+    top: 20%;
+    position: relative;
+
+}
+
+/*Footer*/
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+
 }
