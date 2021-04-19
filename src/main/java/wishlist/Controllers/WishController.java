@@ -4,7 +4,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.context.request.WebRequest;
 import wishlist.Users.User;
 import wishlist.Users.UserManager;
@@ -86,7 +85,7 @@ public class WishController {
 
         model.addAttribute("wishlist",wishManager.viewWishlist(user));
 
-        return "wishlist";
+        return "wishlistdisplay";
     }
 
     private void setSessionInfo(WebRequest request, User user) {
