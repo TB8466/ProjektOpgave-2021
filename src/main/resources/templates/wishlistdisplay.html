@@ -5,9 +5,11 @@
     <title>Title</title>
 </head>
 <body>
-<h1>THIS IS YOUR WISHLIST (hopefully)</h1>
+<h1>Your Wishlist :</h1>
 
-<span th:text="${wishlist}">Something</span>
+<ul th:each="list : ${wishlist}">
+        <li th:text="${list}"></li>
+</ul>
 
 </body>
 </html>
