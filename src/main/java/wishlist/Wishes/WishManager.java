@@ -38,7 +38,6 @@ public class WishManager {
                     Wish wish = new Wish(rs.getString("name"),rs.getString("price"),rs.getString("url"));
                     wishlist.add(wish);
             }
-
-            return wishlist;
+        return wishlist;
     }
 }

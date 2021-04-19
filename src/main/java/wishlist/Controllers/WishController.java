@@ -11,6 +11,7 @@ import wishlist.Wishes.Wish;
 import wishlist.Wishes.WishManager;
 import javax.security.auth.login.LoginException;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 @Controller
 public class WishController {
