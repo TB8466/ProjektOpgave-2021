@@ -26,11 +26,12 @@ public class WishManager {
     public ArrayList<Wish> viewWishlist(User user) throws SQLException {
 
             Connection con = DBManager.getConnection();
-            String query = "SELECT * FROM wishes WHERE user_id=1;";
+            String query = "SELECT * FROM Wishes WHERE user_id=?;";
             PreparedStatement ps = con.prepareStatement(query);
 
-            //ps.setInt(1, user.getId());
+            ps.setInt(1, user.getId());
             ResultSet rs = ps.executeQuery();
+
 
             ArrayList<Wish> wishlist = new ArrayList<>();
             while(rs.next()){
