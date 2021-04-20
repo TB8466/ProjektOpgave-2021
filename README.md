@@ -7,3 +7,9 @@ Jonas,
 Frederik
 &
 Thorbjørn
+
+#NOTE: application.properties fil skal laves i resourcesmappen og udfyldes med:
+user= ...
+password= ...
+url= ...
+#Derefter skal scripted i ProjektScript.sql køres.
