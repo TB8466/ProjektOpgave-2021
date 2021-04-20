@@ -3,11 +3,7 @@ html{
     margin: 0;
     padding: 0;
 }
-
-
-
-
-/* Nav Bar */
+/* Nav Bar, alle knapper = submit */
 input[type=submit]{
     color: white;
     background-color: gray;
@@ -19,20 +15,15 @@ input[type=submit]{
     text-align: center;
     font-size: 16px;
     cursor: pointer;
-
-
-
-
 }
-/* Nav Bar */
+/* Nav Bar, valgte at 'login' knap skal have en anden farve */
 input[value="LOGIN"] {
     background-color: dodgerblue;
     font-size: 16px;
     float: right;
     cursor: pointer;
-    
 }
-/* Nav Bar */
+/* Nav Bar*/
 .topnav{
     background-color: white;
     width: 100%;
@@ -42,49 +33,48 @@ input[value="LOGIN"] {
     justify-content: space-around;
     padding-top: 10px;
     padding-bottom: 10px;
-
-
 }
- .header1{
+/* Nav Bar, lampeånden */
+ .logo-text{
     flex-direction: row;
      display: flex;
      justify-content: space-between;
-
 }
+ /* Logo */
  img{
-     height: 100px;
-     width: 100px;
+     height: 50px;
+     width: 50px;
      flex-direction: row;
      display: flex;
-
  }
-
- /*Uden omkring body */
-
+ /*Inde body */
 body {
     background-color: dodgerblue;
     margin: 0;
     padding: 0;
     height: 100%;
-}
 
+}
+/*Intro txt */
 .intro{
     text-align: center;
     color: white;
     top: 20%;
     position: relative;
-
 }
-
 /*Footer*/
-
 footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     background-color: white;
     position: absolute;
     bottom: 0px;
     width: 100%;
-
 }
+/* Footer.html */
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+

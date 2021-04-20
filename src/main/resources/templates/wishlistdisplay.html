@@ -1,15 +1,21 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/wldisplay.css" th:href="@{/css/wldisplay.css}">
 </head>
 <body>
-<h1>Your Wishlist :</h1>
-
-<ul th:each="list : ${wishlist}">
-        <li th:text="${list}"></li>
-</ul>
-
+<header th:replace="fragments/header :: header">
+</header>
+    <div class="wishlistbox">
+        <h1>Your Wishlist :</h1>
+        <div class="userwishlist">
+            <ul th:each="list : ${wishlist}">
+                <li th:text="${list}"></li>
+            </ul>
+        </div>
+    </div>
+<footer th:replace="fragments/footer :: footer"></footer>
 </body>
 </html>

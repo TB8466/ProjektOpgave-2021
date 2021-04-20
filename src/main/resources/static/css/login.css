@@ -1,0 +1,77 @@
+/*LOGIN*/
+
+html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+/* Logo øverst på siden */
+.logo-container {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+}
+nav {
+    background-color: white;
+    width: 100%;
+    overflow: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+/* logo */
+img {
+    height: 50px;
+    width: 50px;
+}
+
+/* Body */
+body{
+    background-color: dodgerblue;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.User-login{
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    text-align: center;
+    margin: 10%;
+}
+p {
+    color: white;
+}
+
+/* Username  */
+input[type=text] {
+    border: 2px solid darkgoldenrod;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+/* Password */
+input[type=password]{
+    border: 2px solid darkgoldenrod;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+
+/*Footer*/
+footer {
+    background-color: white;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+/* Footer.html */
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}

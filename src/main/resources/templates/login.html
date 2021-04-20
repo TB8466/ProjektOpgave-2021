@@ -1,20 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Login page</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/login.css" th:href="@{/css/login.css}">
 </head>
 <body>
-TYPE LOGIN HERE
+<header th:replace="fragments/header :: header"></header>
+
+<div class="User-login">
+<h2>TYPE LOGIN HERE</h2>
 
 <form name="login" action="/userHome" method="post">
-    Username:
+   <p>Username:</p>
     <input type = text name="username">
     <br>
-    Password:
+    <p>Password:</p>
     <input type = password name="password">
     <br>
-    <input type="submit" value="Submit">
+    <input type="submit" value="Login">
 </form>
+</div>
 </body>
+<footer th:replace="fragments/footer :: footer"></footer>
 </html>

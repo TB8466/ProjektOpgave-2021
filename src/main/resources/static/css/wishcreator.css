@@ -1,0 +1,85 @@
+/*CREATE A WISH*/
+
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+/* Logo øverst på siden */
+.logo-container {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+}
+nav {
+    background-color: white;
+    width: 100%;
+    overflow: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+/* LOGO */
+img {
+    height: 50px;
+    width: 50px;
+}
+
+/* Body */
+body{
+    background-color: dodgerblue;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+/* Position for boksne */
+.wishBox {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    text-align: center;
+}
+/* header styling */
+.wishBox h1{
+    color: white;
+}
+/* Styling af knapperne */
+.buttons input[type=text] {
+    border: 2px solid darkgoldenrod;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+/* Styling af p tagsne */
+.buttons p{
+    color: white;
+}
+/* Submit */
+.buttons input[type=submit]{
+    color: darkgoldenrod;
+        background-color: white;
+        border-radius: 10px;
+        border-color: darkgoldenrod;
+        padding-top: 20px;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 20px;
+        text-align: center;
+        font-size: 16px;
+        cursor: pointer;
+}
+
+footer {
+    background-color: white;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+/* Footer.html */
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
