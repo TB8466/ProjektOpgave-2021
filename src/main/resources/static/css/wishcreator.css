@@ -83,3 +83,7 @@ footer {
     justify-content: space-evenly;
 
 }
+.footer-container p {
+    color: darkgoldenrod;
+
+}

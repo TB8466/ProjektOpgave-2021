@@ -1,24 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>WishlistCreation</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/wishcreator.css" th:href="@{/css/wishcreator.css}">
+
 </head>
 <body>
-<h1>Enter you wish:</h1>
-
-<form name="createWish" action="/createWish" method="post">
-    Name of wish:
-    <input type="text" name="wishname">
-    <br>
-    Price of wish:
-    <input type="text" name="wishprice">
-    <br>
-    *OPTIONAL link to wish:
-    <input type="text" name="wishlink">
-    <br>
-    <input type="submit" value="Submit">
-</form>
-
+<header th:replace="fragments/header :: header">
+</header>
+    <div class="wishBox">
+        <h1>Enter you wish:</h1>
+        <div class="buttons">
+            <form name="createWish" action="/createWish" method="post">
+                <div class="cwbutton">
+                    <p>Name of wish:</p>
+                    <input type="text" name="wishname">
+                    <br>
+                </div>
+                <div class="pricebutton">
+                    <p>Price of wish:</p>
+                    <input type="text" name="wishprice">
+                    <br>
+                </div>
+                <div class="linkbutton">
+                    <p>*OPTIONAL link to:</p>
+                    <input type="text" name="wishlink">
+                    <br>
+                </div>
+                <div class="sumbitbutton">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </div>
+<footer th:replace="fragments/footer :: footer"></footer>
 </body>
 </html>

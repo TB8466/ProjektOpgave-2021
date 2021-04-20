@@ -7,26 +7,29 @@
 </head>
 <body>
 <header>
-<nav class="topnav">
-    <form name="login" action="/login"  method="post">
-        <input type="submit" value="LOGIN">
-    </form>
-    <form name="createuser" action="/newUser"  method="post">
-        <input type="submit"  value="CREATE NEW USER">
-    </form>
-    <div class="logo-text">
-        <img src="/images/spirit.jpg">
-    </div>
-</nav>
+    <nav class="homenav">
+        <div class="loginbutton">
+            <form name="login" action="/login"  method="post">
+                <input type="submit" value="LOGIN">
+            </form>
+        </div>
+        <div class="createuserbutton">
+            <form name="createuser" action="/newUser"  method="post">
+                <input type="submit"  value="CREATE NEW USER">
+            </form>
+        </div>
+        <div class="logo-text">
+            <img src="/images/spirit.jpg">
+        </div>
+    </nav>
 </header>
 <div class="intro">
-<h2>Velkommen til lampeånden</h2>
+    <h2>Velkommen til lampeånden</h2>
     <br>
     <br>
-<p>Stryg let over den og måske er du heldig
-at kunne få dine ønsker opfyldt</p>
+    <p>Stryg let over den og måske er du heldig
+        at kunne få dine ønsker opfyldt</p>
 </div>
-
 <footer th:replace="fragments/footer :: footer"></footer>
 </body>
 <html/>

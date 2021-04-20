@@ -7,20 +7,18 @@
 </head>
 <body>
 <header th:replace="fragments/header :: header"></header>
-
 <div class="User-login">
-<h2>TYPE LOGIN HERE</h2>
-
-<form name="login" action="/userHome" method="post">
-   <p>Username:</p>
-    <input type = text name="username">
-    <br>
-    <p>Password:</p>
-    <input type = password name="password">
-    <br>
-    <input type="submit" value="Login">
-</form>
+    <h2>TYPE LOGIN HERE</h2>
+    <form name="login" action="/userHome" method="post">
+        <p>Username:</p>
+        <input type = text name="username">
+        <br>
+        <p>Password:</p>
+        <input type = password name="password">
+        <br>
+        <input type="submit" value="Login">
+    </form>
 </div>
-</body>
 <footer th:replace="fragments/footer :: footer"></footer>
+</body>
 </html>

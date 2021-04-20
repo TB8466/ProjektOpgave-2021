@@ -60,6 +60,13 @@ input[type=password]{
     box-sizing: border-box;
 }
 
+input[type=submit]{
+    color: darkgoldenrod;
+    background-color: white;
+    border-radius: 10px;
+    border-color: darkgoldenrod;
+}
+
 
 /*Footer*/
 footer {
@@ -67,11 +74,16 @@ footer {
     position: absolute;
     bottom: 0px;
     width: 100%;
+
 }
 /* Footer.html */
 .footer-container {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+
+}
+.footer-container p {
+    color: darkgoldenrod;
 
 }

@@ -5,9 +5,10 @@ html{
 }
 /* Nav Bar, alle knapper = submit */
 input[type=submit]{
-    color: white;
-    background-color: gray;
+    color: darkgoldenrod;
+    background-color: white;
     border-radius: 10px;
+    border-color: darkgoldenrod;
     padding-top: 20px;
     padding-left: 40px;
     padding-right: 40px;
@@ -15,45 +16,50 @@ input[type=submit]{
     text-align: center;
     font-size: 16px;
     cursor: pointer;
+    margin-left: 20%;
 }
-/* Nav Bar, valgte at 'login' knap skal have en anden farve */
-input[value="LOGIN"] {
-    background-color: dodgerblue;
+/* Login knap */
+.loginbutton input[value="LOGIN"] {
+    color: darkgoldenrod;
+    background-color: white;
+    border-radius: 10px;
+    border-color: darkgoldenrod;
     font-size: 16px;
     float: right;
     cursor: pointer;
 }
 /* Nav Bar*/
-.topnav{
+.homenav{
     background-color: white;
     width: 100%;
     overflow: auto;
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    position: center;
     padding-top: 10px;
     padding-bottom: 10px;
+
 }
 /* Nav Bar, lampeånden */
- .logo-text{
+.logo-text{
     flex-direction: row;
-     display: flex;
-     justify-content: space-between;
+    display: flex;
+    justify-content: space-evenly;
 }
- /* Logo */
- img{
-     height: 50px;
-     width: 50px;
-     flex-direction: row;
-     display: flex;
- }
- /*Inde body */
+/* Logo */
+img{
+    height: 50px;
+    width: 50px;
+    flex-direction: row;
+    display: flex;
+}
+/*Inde body */
 body {
     background-color: dodgerblue;
     margin: 0;
     padding: 0;
     height: 100%;
-
 }
 /*Intro txt */
 .intro{
@@ -75,6 +81,9 @@ footer {
     flex-direction: row;
     justify-content: space-around;
 }
+.footer-container p {
+    color: darkgoldenrod;
 
+}
 
 
