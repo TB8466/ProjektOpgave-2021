@@ -1,0 +1,6 @@
+function getAllKommunerAPI()
+{
+  out("getAllKommuner kaldt");
+  const kommuneAPI = kommuneUrl;
+  return fetch(kommuneAPI).then(response => response.json());
+}

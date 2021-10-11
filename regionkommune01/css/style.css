@@ -1,0 +1,13 @@
+.ddRegion{
+  position: absolute;
+}
+
+.h1field h2{
+  display: flex;
+  border-radius: 3px;
+  border-color: crimson;
+  border-style: solid;
+  position: relative;
+  float:left; display:inline; width: 49%;
+  font-size: 30px;
+}
